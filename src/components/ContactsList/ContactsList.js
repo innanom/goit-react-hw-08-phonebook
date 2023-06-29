@@ -3,11 +3,11 @@ import React from 'react';
 import { List, Text } from './ContactsList.styled';
 import { ContactItem } from '../ContactItem/ContactItem';
 import { useSelector } from 'react-redux';
-import { getContacts, getFilter } from 'redux/selector';
+import { selectContacts, selectFilter } from 'redux/Contacts/selectors';
 
 export const ContactsList = () => {
-    const contacts = useSelector(getContacts);
-    const filter = useSelector(getFilter);
+    const contacts = useSelector(selectContacts);
+    const filter = useSelector(selectFilter);
    
     const getVisibleContacts = () => {
         const normalizedFilter = filter.toLowerCase().trim();

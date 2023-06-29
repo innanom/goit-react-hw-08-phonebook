@@ -1,6 +1,6 @@
-import { styled } from '@emotion/styled';
+import styled  from '@emotion/styled';
 
-export const Link = styled.div`
+export const AuthNav = styled.div`
     display: inline-block;
     text-decoration: none;
     padding: 12px;

@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
-import { FormContacts, LabelForm, InputForm, BtnForm } from './Form.styled';
+import { FormContacts, LabelForm, InputForm, BtnForm } from './ContactsForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from 'redux/selector';
-import { addContact } from 'redux/operations';
+import { selectContacts } from 'redux/Contacts/selectors';
+import { addContact } from 'redux/Contacts/operations';
 
-export const Form = () => {
+export const ContactsForm = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const contacts = useSelector(getContacts);
+  const [number, setNumber] = useState('');
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const handleChangeName = event => {
       setName(event.currentTarget.value);
   };
   
-  const handleChangePhone = event => {
-      setPhone(event.currentTarget.value);
+  const handleChangeNumber = event => {
+      setNumber(event.currentTarget.value);
   }
   
-  const handleAddContact = (name, phone) => {
+  const handleAddContact = (name, number) => {
     const contact = {
       id: nanoid(),
       name,
-      phone,
+      number,
     };
       dispatch(addContact(contact));
   };
@@ -36,13 +36,13 @@ export const Form = () => {
       return;
     }
 
-    handleAddContact(name, phone);
+    handleAddContact(name, number);
     reset();
   };
 
   const reset = () => {
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   return (
@@ -59,15 +59,15 @@ export const Form = () => {
               required
             />
            </LabelForm>
-           <LabelForm>Phone
+           <LabelForm>Number
               <InputForm
                 type="tel"
-                name="phone"
-                placeholder='Enter your telephone phone'
-                value={phone}
-                onChange={handleChangePhone}
+                name="number"
+                placeholder='Enter your telephone number'
+                value={number}
+                onChange={handleChangeNumber}
                 pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                title="Phone phone must be digits and can contain spaces, dashes, parentheses and can start with +"
+                title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                 required
               />
            </LabelForm>
