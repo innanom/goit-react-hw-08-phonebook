@@ -1,6 +1,6 @@
 import { styled } from '@emotion/styled';
 
-export const NavLink = styled.link`
+export const Link = styled.div`
     display: inline-block;
     text-decoration: none;
     padding: 12px;

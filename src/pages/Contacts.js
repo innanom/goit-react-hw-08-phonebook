@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { ContactsList } from 'components';
 import { ContactsForm } from 'components/';
 import { fetchContacts } from 'redux/Contacts/operations';
-import { selectLoading } from 'redux/tasks/selectors';
+import { selectLoading } from 'redux/Contacts/selectors';
 
 export default function Tasks() {
   const dispatch = useDispatch();

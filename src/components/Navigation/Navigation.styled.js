@@ -1,6 +1,6 @@
-import { styled } from '@emotion/styled';
+import styled from '@emotion/styled';
 
-export const NavLink = styled.NavLink`
+export const Nav = styled.nav`
     display: inline-block;
     text-decoration: none;
     padding: 12px;
