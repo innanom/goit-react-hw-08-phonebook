@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import { ContactsList } from '../components/ContactsList/ContactsList';
 import { ContactsForm } from '../components/ContactsForm/ContactsForm';
 import { fetchContacts } from '../redux/Contacts/operations';
@@ -17,9 +17,9 @@ export default function Contacts() {
 
    return (
     <div>
-      <Helmet>
+      {/* <Helmet> */}
         <title>Your contacts</title>
-      </Helmet>
+      {/* </Helmet> */}
       <ContactsForm />
       <div>{isLoading && 'Request in progress...'}</div>
       <ContactsList />
