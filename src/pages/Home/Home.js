@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Title } from './Home.styled';
 
 export default function Home() {
