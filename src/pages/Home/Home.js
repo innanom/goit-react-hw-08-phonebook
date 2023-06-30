@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <Container>
       <Title>
-       Welcome to your phonebook!
+        Welcome to your phonebook!
+        <span role="img" aria-label="Greeting icon">
+          💁‍♀️
+        </span>
       </Title>
     </Container>
   );

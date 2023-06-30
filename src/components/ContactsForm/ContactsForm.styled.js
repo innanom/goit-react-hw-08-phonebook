@@ -27,8 +27,10 @@ export const InputForm = styled.input`
 
 export const BtnForm = styled.button`
     width: 150px;
+    font-size: 14px;
     padding: 10px 15px;
     background-color: rgba(104, 48, 109, 0.274);
+    border-radius: 3px;
     border-color: rgba(164, 91, 233, 0.404);
     box-shadow: 0 0 0 rgba(30, 9, 33, 0.473),
         0 2px 8px rgba(104, 48, 109, 0.274);

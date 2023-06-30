@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const ListItem = styled.li`
     position: relative;
     display: flex;
-
+    
     align-items:baseline;
     justify-content:space-between;
 
@@ -21,9 +21,9 @@ export const ListItem = styled.li`
 `;
 
 export const TextItem = styled.p`
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    // color: rgb(68, 38, 97);
+    color: rgb(68, 38, 97);
 `;
 
 export const BtnDelete = styled.button`
@@ -31,7 +31,7 @@ export const BtnDelete = styled.button`
     font-weight: 500;
     background-color: rgba(104, 48, 109, 0.200);
     border: 0;
-    border-radius: 5%;
+    border-radius: 3px;
     padding: 5px 15px;
 
         &:hover {

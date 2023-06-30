@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { useAuth } from '../hooks';
 import { Nav } from './Navigation.styled';
 
@@ -7,15 +6,15 @@ export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Nav>
-      <NavLink to="/">
+    <div>
+      <Nav to="/">
         Home
-      </NavLink>
+      </Nav>
       {isLoggedIn && (
-        <NavLink  to="/contacts">
+        <Nav  to="/contacts">
           Contacts
-        </NavLink>
+        </Nav>
       )}
-    </Nav>
+    </div>
   );
 };
