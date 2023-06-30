@@ -32,7 +32,7 @@ return isRefreshing ? (
         <Route
           path="/register"
           element={
-            <RestrictedRoute redirectTo="/contactss" component={<RegisterPage />} />
+            <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
           }
         />
         <Route
@@ -42,7 +42,7 @@ return isRefreshing ? (
           }
         />
         <Route
-          path="/tasks"
+          path="/contacts"
           element={
             <PrivateRoute redirectTo="/login" component={<ContactsPage/>} />
           }
